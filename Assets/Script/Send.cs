@@ -1,0 +1,25 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using DG.Tweening;
+
+public class Send : MonoBehaviour
+{
+    public UdpSend _UdpSend;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void Onclick()
+    {
+        _UdpSend.Send();
+    }
+}
