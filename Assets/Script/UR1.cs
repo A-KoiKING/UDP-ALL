@@ -8,7 +8,7 @@ using UniRx;
 using UnityEngine.UI;
 using TMPro;
 
-public class UdpReceive : MonoBehaviour
+public class UR1 : MonoBehaviour
 {
     private int R_port;
     public TextMeshProUGUI R_PortNumber;
@@ -20,7 +20,7 @@ public class UdpReceive : MonoBehaviour
 
     void Start()
     {
-        R_port = PlayerPrefs.GetInt("R_PORT", 64276);
+        R_port = PlayerPrefs.GetInt("R_PORT_1", 64276);
         R_Port_InputField.text = R_port.ToString();
         R_PortNumber.text = R_port.ToString();
 
@@ -70,7 +70,7 @@ public class UdpReceive : MonoBehaviour
         R_Port_InputField.text = R_port.ToString();
         R_PortNumber.text = R_port.ToString();
 
-        PlayerPrefs.SetInt("R_PORT", R_port);
+        PlayerPrefs.SetInt("R_PORT_1", R_port);
         PlayerPrefs.Save();
 
         udpClient = new UdpClient(R_port);
